@@ -1,0 +1,38 @@
+<h1>Welcome to McDowell's!</h1>
+
+<h2>Burgers Better Than McDonald's!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless hungry}}
+      {{> burgers/burger-block eat=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers that are hungry!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if hungry}}
+      {{> burgers/burger-block eat=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add A Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="hungry">hungry?</label><br>
+    <input type="radio" name="hungry" value="1" checked> Hungry!<br>
+    <input type="radio" name="hungry" value="0"> Being Made!
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
