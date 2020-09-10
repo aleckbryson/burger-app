@@ -16,14 +16,24 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+  text-align: center;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
